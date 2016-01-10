@@ -1,0 +1,81 @@
+body {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+div, form, dl, dd, dt, ul, li, p, img, a, span, pp, s1, s2, s3, s4, input {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+h1, h2, h3, h4, h5, h6, h7, h8 {
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+}
+img {
+	vertical-align: middle;
+	width: 100%
+}
+.clear {
+	clear: both;
+}
+.guangao {
+	width: 100%;
+}
+.kuaijie {
+	width: 96%;
+	padding: 2%
+}
+.kuaijie1 {
+	width: 49%;
+	float: left;
+}
+.kuaijie2 {
+	width: 49%;
+	float: right;
+}
+.kuaijie3 {
+	width: 49%;
+	float: left;
+	margin-top: 2%
+}
+.kuaijie4 {
+	width: 49%;
+	float: right;
+	margin-top: 2%
+}
+.zhanghu {
+	width: 100%;
+	background: #FFF
+}
+.zhanghu ul li {
+	border-bottom: 1px solid #e1e1e1;
+	padding: 5%;
+	color: #666;
+	font-size: 1.2em
+}
+.zhanghuvip ul li {
+	padding: 5%;
+	color: #666;
+	font-size: 1.2em
+}
+.inp1 {
+	width: 100%;
+	margin: 0px auto;
+}
+.wenzi2 {
+	font-size: 1em;
+	color: #666;
+	float: left;
+	line-height: 30px;
+	width: 25%;
+	text-align: right
+}
+.wenben {
+	width: 70%;
+	height: 30px;
+	float: right;
+}
+.touxiang{ width:30%; margin:0 auto; margin-top:5%}

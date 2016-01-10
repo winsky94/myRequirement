@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>待审批</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/common.css" />
+    <script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/jquery1.9.js"></script>
+  <script type="text/javascript" src="js/refresh.js"></script>
+	<script type="text/javascript" src="js/waitCheckList.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/MyPlguin.js"></script>
+  <script type="text/javascript" src="js/AndroidCheck.js"></script>
+  <script language="javascript">
+if (browser.versions.iPhone || browser.versions.iPad || browser.versions.ios) {
+  A_I_flag=true;//判断是否为安卓 兼容安卓和苹果的CSS文字对齐
+}
+
+
+if(A_I_flag==true)
+{
+    var now=new Date();
+        var number = now.getYear().toString()+now.getMonth().toString()+now.getDate().toString()+now.getHours().toString()+now.getMinutes().toString()+now.getSeconds().toString();
+        document.write("\<script language=\"javascript\" type=\"text/javascript\" src=\"js/common.js?"+number+"\"><\/script\>");
+}
+else
+{
+
+        document.write("\<script language=\"javascript\" type=\"text/javascript\" src=\"js/common.js\"><\/script\>");
+}
+   
+  </script>
+
+	<style>
+/*全局样式*/
+html, body, table, tr, td, span, ul, li {
+  margin: 0 auto;
+  padding: 0;
+  font-family: "微软雅黑";
+}
+body {
+  background: #efeff5
+}
+
+ul, li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+a:hover {
+  color: #fff;
+}
+
+</style>
+</head>
+<body class="liststyle" ng-app="apply">
+    <div id="scrollTitle" style="height:226px;">
+    	<div style="margin:auto;text-align:center">
+      		<div style="height: 169px;"></div>
+      		<div class="refresh-title">
+      			<img id="jiantou" src="images/arr.png" />
+      			<span id="xialawenzi">下拉刷新</span>
+      		</div>
+      	</div>
+	</div>
+<div id="refreshDiv">
+  <div ng-controller="ApplyController as apply" >
+    <div class="list-add" style="display:none;"><div class="list-add1"><span class="icon-plus"></span><span style="font-size:18px;">新增</span></div></div>
+  <div ng-repeat="map in apply.list" class="kuanjia" >
+  <div ng-click="apply.detial(map.id)">
+  <div class="xiangmu"><p><span>申请人:</span>{{map.apply_user_name}}</p><p><span>申请时间:</span>{{map.log_time*1000 | date:'yyyy-MM-dd'}}</p>
+  <div class="clear"></div>
+  </div>
+  </div>
+  <div class="neirong" ng-click="apply.detial(map.id)">
+  <p class="oneline"><span>申请内容:</span>{{map.name}}</p>
+  <p><span>申请类型:</span>{{map.type_name}}</p>
+  <p class="oneline"><span>申请原因:</span>{{map.reason |limitTo:25}}</p>
+  <p><span>审批状态:</span><font ng-show="map.status==0">未审批</font><font ng-show="map.status==1">审批中</font><font  ng-show="map.status==2">已审批</font><font  ng-show="map.status==-2">已作废</font><font   ng-show="map.status==-1">审批否决</font></p>
+  <p ><span>我的操作:</span><font ng-show="map.check_status==0">未审批</font><font ng-show="map.check_status==1">同意</font><font ng-show="map.check_status==-1">否决</font></p>
+  <div class="clear"></div>
+  </div>
+  <div class="xi">
+
+    <div style="width:70%; float:right;"><div class="newss"><a ng-click="apply.copy(map.id)" >抄&nbsp;&nbsp;送</a></div><div class="newss"><a ng-click="apply.detial(map.id)" >审批</a></div></div>
+  <div class="clear"></div>
+  </div>
+</div>
+</div>
+</div>
+  </body>
+</html>
