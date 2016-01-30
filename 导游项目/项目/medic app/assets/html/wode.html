@@ -1,0 +1,42 @@
+<!doctype html>
+<html ng-app="Wode">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>我的</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/wode.js"></script>
+
+</head>
+<body style="background:#f1f1f1" ng-controller="WodeController as Wode">
+<div class="zhanghu1">
+  <ul>
+    <li ng-click="Wode.MyInfo()">{{Wode.user.name}}
+      <div style="width:20px; float:right"><img src="images/anniu1.png"   alt=""/></div>
+    </li>
+  </ul>
+</div>
+
+<div class="zhanghu" style="margin-top: 20px;">
+  <ul>
+    <li ng-click="Wode.MyCase()">
+      <div style="width:30px; float:left"></div>
+      个人病例
+      <div style="width:20px; float:right"><img src="images/anniu1.png"   alt=""/></div>
+    </li>
+    <li ng-click="Wode.changePwd()">修改密码
+      <div style="width:20px; float:right"><img src="images/anniu1.png"   alt=""/></div>
+    </li>
+    <li>关于<div style="width:20px; float:right"><img src="images/anniu1.png"   alt=""/></div> </li>
+  </ul>
+</div>
+
+<div style="width: 90%;
+  padding: 5%;">
+  <div class="newss" ng-click="Wode.logout()"><a>退出账号</a></div>
+</div>
+</body>
+</html>

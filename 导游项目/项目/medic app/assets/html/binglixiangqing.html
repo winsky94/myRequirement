@@ -1,0 +1,26 @@
+<!doctype html>
+<html ng-app="myCase">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>病例详情</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/binglidetail.js"></script>
+</head>
+<body style="background:#f1f1f1" ng-controller="MyCaseController as myCase">
+<div class="kuan">
+  <div style="width:100%; color:#00acf9; font-size:1.2em">基本病情</div>
+  <div class="neirong1">{{myCase.detail.content}}</div>
+</div>
+<div class="kuan">
+  <div style="width:100%; color:#00acf9; font-size:1.2em">病情资料</div>
+  <div style="width:15%; float:left; padding:0% 3% ;" ng-show="myCase.pic1[0]!=''"><a ng-href="http://{{myCase.url}}/upload/medical/{{myCase.pic1[0]}}"><img ng-src="http://{{myCase.url}}/upload/medical/s_{{myCase.pic1[0]}}"  alt=""/></a></div>
+  <div style="width:15%; float:left; padding:0% 3% ;" ng-show="myCase.pic1[1]!=''"><a ng-href="http://{{myCase.url}}/upload/medical/{{myCase.pic1[1]}}"><img ng-src="http://{{myCase.url}}/upload/medical/s_{{myCase.pic1[1]}}"  alt=""/></a></div>
+      <div style="width:15%; float:left; padding:0% 3% ;" ng-show="myCase.pic1[2]!=''"><a ng-href="http://{{myCase.url}}/upload/medical/{{myCase.pic1[2]}}"><img ng-src="http://{{myCase.url}}/upload/medical/s_{{myCase.pic1[2]}}"  alt=""/></a></div>
+  <div class="clear"></div>
+</div>
+</body>
+</html>

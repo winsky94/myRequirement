@@ -1,0 +1,19 @@
+<!doctype html>
+<html ng-app="Geren">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>我的资料</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/gerenxinxi.js"></script>
+</head>
+<body style="background:#f1f1f1" ng-controller="GerenController as Geren">
+<div style=" background:#FFF; border-bottom:1px solid #dedede;border-top:1px solid #dedede;  padding:5%; margin-top:5%"><span style="font-size:1.2em; color:#666">姓名：</span><span style="font-size:1em; color:#888">{{Geren.user.name}}</span></div>
+<div style=" background:#FFF; border-bottom:1px solid #dedede;border-top:1px solid #dedede;  padding:5%; margin-top:5%"><span style="font-size:1.2em; color:#666">性别：</span><span style="font-size:1em; color:#888"><font ng-show="Geren.user.sex==1">男</font><font ng-show="Geren.user.sex==0">女</font></span></div>
+<div style=" background:#FFF; border-bottom:1px solid #dedede;border-top:1px solid #dedede;  padding:5%; margin-top:5%"><span style="font-size:1.2em; color:#666">年龄：</span><span style="font-size:1em; color:#888">{{Geren.user.age}}</span></div>
+<div style=" background:#FFF; border-bottom:1px solid #dedede;border-top:1px solid #dedede;  padding:5%; margin-top:5%"><span style="font-size:1.2em; color:#666">电话号码：</span><span style="font-size:1em; color:#888">{{Geren.user.phone}}</span></div>
+</body>
+</html>

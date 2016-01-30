@@ -1,0 +1,27 @@
+<!doctype html>
+<html ng-app="Geren">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>编辑资料</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/gerenedit.js"></script>
+<style type="text/css">
+	
+</style>
+</head>
+<body style="background:#f1f1f1" ng-controller="GerenController as Geren">
+<div class="editlist"><span style="font-size:1.2em; color:#666">姓名：</span><input placeholder="请输入姓名" ng-model="Geren.user.name"></div>
+<div class="editlist"><span style="font-size:1.2em; color:#666">性别：</span><input type="radio" name="sex" ng-model="Geren.user.sex" value="1">男&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="sex" ng-model="Geren.user.sex" value="0">女</div>
+<div class="editlist"><span style="font-size:1.2em; color:#666">年龄：</span><input type="number" placeholder="请输入年龄" ng-model="Geren.user.age"></div>
+<div class="editlist"><span style="font-size:1.2em; color:#666">电话号码：</span><input placeholder="请输入号码" style="width: 61%;" ng-model="Geren.user.phone"></div>
+
+<div style="width: 90%;
+  padding: 5%;">
+  <div class="newss"><a href="#" ng-click="Geren.submit()">修改信息</a></div>
+</div>
+</body>
+</html>

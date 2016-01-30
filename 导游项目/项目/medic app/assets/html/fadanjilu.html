@@ -1,0 +1,23 @@
+<!doctype html>
+<html ng-app="fadan">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title></title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/fadanjilu.js"></script>
+</head>
+<body style="background:#f1f1f1" ng-controller="FadanController as fadan">
+<div style=" background:#3fc4ff; padding: 4px 4px 4px 4px;height: 40px;"><div style=" width:8%; float:left" ng-click="fadan.back()"><img src="images/fanghui_03.png" alt=""/></div><div style="width:90%; text-align:center; color:#FFF; font-size:1.5em;  float:left; line-height:38px;">发起记录</div>
+ <div class="clear"></div>
+</div>
+<div class="kuan" ng-repeat="info in fadan.list" ng-click="fadan.detail(info.id)">
+  <div class="biaoti">{{info.dept_name}}</div>
+  <div class="neirong"><span>描述：</span>{{info.description}}</div>
+  <div class="zhuantai"><span>状态：</span> <span style="color:#ff0000">{{info.status==0?'未接单':info.status==1?'已接单':info.status==2?'服务中':'结束'}}</span><span style="float:right; color:#9f9f9f">{{info.cdate}}</span></div>
+</div>
+</body>
+</html>

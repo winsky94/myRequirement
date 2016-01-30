@@ -1,0 +1,32 @@
+<!doctype html>
+<html ng-app="doctor">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title></title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/yisheng.js"></script>
+</head>
+<body style="background:#f1f1f1" ng-controller="DoctorController as doctor">
+<div style=" background:#3fc4ff; padding: 4px 4px 4px 4px;height: 40px;"><div style=" width:8%; float:left" ng-click="doctor.back()"><img src="images/fanghui_03.png" alt=""/></div><div style="width:90%; text-align:center; color:#FFF; font-size:1.5em;  float:left; line-height:38px;">医生团队</div>
+ <div class="clear"></div>
+</div>
+<div class="zhanghu" style="margin-top: 20px;" ng-repeat="doc in doctor.list">
+  <ul>
+    <li>
+      <div class="inp1" ><span class="wenzi2"><img src="images/touxiang_03.jpg"   alt=""/></span>
+      <div style=" float:right; line-height:46px;"> <p>{{doc.name}}   {{doc.hospitalName}}</p>
+       <p style="font-size:0.8em">{{doc.deptName}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{doc.roleName}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{doc.description}}</p></div>
+      
+        <div class="clear"></div>
+      </div>
+    </li>
+   
+  </ul>
+</div>
+
+</body>
+</html>

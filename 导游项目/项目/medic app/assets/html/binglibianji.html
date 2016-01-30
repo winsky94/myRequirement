@@ -1,0 +1,32 @@
+<!doctype html>
+<html ng-app="editCase">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>新增病例</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/binglibianji.js"></script>
+</head>
+<body style="background:#f1f1f1" ng-controller="EditCaseController as editCase">
+<div class="kuan">
+  <div style="width:100%; color:#00acf9; font-size:1.2em">基本病情</div>
+  <div class="neirong1" style=" margin-top:5%"> <textarea  ng-model="editCase.content" class="textsty textarea02" name="content" resize="none"></textarea></div>
+</div>
+<div class="kuan">
+  <div style="width:100%; color:#00acf9; font-size:1.2em">病情资料</div>
+   <div style="float:left; width:30%; color:#666; line-height:40px; margin-top:5% ">上传病例</div>
+  <div style="width:15%; float:left; padding:0% 3% ; margin-top:5%" ng-click="editCase.capture(0)"><img ng-src="{{editCase.screencap[0]}}" alt=""/></div>
+  <div style="width:15%; float:left; padding:0% 3% ; margin-top:5%" ng-click="editCase.capture(1)"><img ng-src="{{editCase.screencap[1]}}"  alt=""/></div>
+  <div style="width:15%; float:left; padding:0% 3% ; margin-top:5%" ng-click="editCase.capture(2)"><img ng-src="{{editCase.screencap[2]}}"  alt=""/></div>
+  <div class="clear"></div>
+</div>
+<div style="width: 90%;
+  padding: 5%;">
+  <div class="newss"><a ng-click="editCase.submit()">保存</a></div>
+</div>
+
+</body>
+</html>

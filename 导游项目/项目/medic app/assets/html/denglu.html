@@ -1,0 +1,39 @@
+<!doctype html>
+<html ng-app="Login">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>我的</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/login.js"></script>
+</head>
+<body style="background:#f1f1f1" ng-controller="LoginController as Login">
+<div style=" background:#3fc4ff;padding: 4px 4px 4px 4px;height: 40px;"><div style=" width:8%; float:left" ng-click="Login.back()"><img src="images/fanghui_03.png" alt=""/></div><div style="width:90%; text-align:center; color:#FFF; font-size:1.5em;  float:left; line-height:33px;">登录</div>
+ <div class="clear"></div>
+</div>
+<div class="zhanghu" style="margin-top: 30%;">
+  <ul>
+    <li>
+      <div class="inp1" ><span class="wenzi2">用户名:</span>
+        <input type="text" class="wenben" ng-model="Login.username">
+        <div class="clear"></div>
+      </div>
+    </li>
+    <li>
+      <div class="inp1" ><span class="wenzi2">密码:</span>
+        <input type="password" class="wenben" ng-model="Login.password">
+        <div class="clear"></div>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<div style="width: 90%;padding: 5%; margin-top:20%">
+  <div class="newss"><a ng-click="Login.submit()">登录</a></div>
+</div>
+<div style=" width:90%; margin:0 auto; color:#6f6f6f; padding:5%"><span style=" float:left">忘记密码？ </span> <span style="float:right">立即注册</span></div>
+</body>
+</html>

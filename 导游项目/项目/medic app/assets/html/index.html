@@ -1,0 +1,32 @@
+<!doctype html>
+<html ng-app="Index">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>首页</title>
+
+	<link href="css/css.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+</head>
+<body style="background:#f1f1f1" ng-controller="IndexController as Index">
+	<div style=" background:#3fc4ff; padding: 4px 4px 4px 4px;height: 40px;"><div  ng-show="Index.ads==true" ng-click="Index.login()" style=" width:55%; float:left; color:#FFF; font-size:1.5em;  float:left; line-height:38px;    margin-left: 8px;text-align:left">登录</div>
+	<div  ng-show="Index.ads==false" style=" width:55%;  color:#FFF; font-size:1.5em;  float:left; line-height:38px;    margin-left: 8px;">{{Index.username}},欢迎您&nbsp;&nbsp;</div>
+	<div  ng-show="Index.ads==false" ng-click="Index.mine();" style=" width:12%; float:right; color:#FFF; font-size:1.5em; line-height:38px;    margin-right: 8px;text-align:right"><img src="images/iocn_03.png"></div>
+	<div class="clear"></div>
+</div>
+<div style=" position:relative;  "><img src="images/banner_02.jpg"  alt=""/></div>
+<div style="position:absolute; width:30%; margin:0 auto; bottom:14%; left:35%;" ng-click="Index.symptom();"><img src="images/news_03.png"   alt=""/></div>
+<div style=" width:90%; padding:2% 5%;position:absolute; bottom:0%; left:0%; background:#f1f1f1">
+	<div style=" width:30%; float:left" ng-click="Index.gotolog();"><div style="width:50%; margin:0 auto"><img src="images/iocn_07.png" alt="" /></div>
+	<p style=" color:#01a2ea; font-size:1em;  text-align:center">发起记录</p>
+</div>
+<div style=" width:30%; float:right" ng-click="Index.gototuandui();"><div style="width:50%; margin:0 auto"><img src="images/iocn_09.png"   alt="" /></div>
+<p style=" color:#545454; font-size:1em; text-align:center">医生团队</p>
+</div>
+<div class="clear"></div>
+</div>
+</body>
+</html>

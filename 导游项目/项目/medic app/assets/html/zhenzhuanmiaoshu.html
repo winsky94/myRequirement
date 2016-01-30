@@ -1,0 +1,55 @@
+<!doctype html>
+<html ng-app="symptom">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>订单详情</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/zhenzhuang.js"></script>
+</head>
+<body style="background:#f1f1f1" ng-controller="SymptomController as symptom">
+<div style=" background:#3fc4ff; padding: 4px 4px 4px 4px;height: 40px;"><div style=" width:8%; float:left" ng-click="symptom.back()"><img src="images/fanghui_03.png" alt=""/></div><div style="width:90%; text-align:center; color:#FFF; font-size:1.5em;  float:left; line-height:38px;">症状描述</div>
+ <div class="clear"></div>
+</div>
+<div class="kuan">
+  <div class="neirong1"><textarea  ng-model="symptom.description"  style="width:100%; height:100px" >
+  </textarea></div>
+</div>
+<div class="kuan">
+  <div style="float:left; width:30%; color:#666; line-height:40px; ">上传病例</div>
+  <div style="width:15%; float:left; padding:0% 3% ;" ng-click="symptom.capture(0)"><img ng-src="{{symptom.screencap[0]}}"  alt=""/></div>
+  <div style="width:15%; float:left; padding:0% 3% ;" ng-click="symptom.capture(1)"><img ng-src="{{symptom.screencap[1]}}"  alt=""/></div>
+  <div style="width:15%; float:left; padding:0% 3% ;" ng-click="symptom.capture(2)"><img ng-src="{{symptom.screencap[2]}}"  alt=""/></div>
+  
+  <div class="clear"></div>
+</div>
+<div class="kuan1">
+  <div style="float:left; width:30%; color:#666; line-height:40px; ">化验单上传</div>
+  <div style="width:15%; float:left; padding:0% 3% ;" ng-click="symptom.capture(3)"><img ng-src="{{symptom.screencap[3]}}"  alt=""/></div>
+  <div style="width:15%; float:left; padding:0% 3% ;" ng-click="symptom.capture(4)"><img ng-src="{{symptom.screencap[4]}}"  alt=""/></div>
+  <div style="width:15%; float:left; padding:0% 3% ;" ng-click="symptom.capture(5)"><img ng-src="{{symptom.screencap[5]}}"  alt=""/></div>
+  
+  <div class="clear"></div>
+</div>
+<div class="kuan1">
+  <div style="float:left; width:30%; color:#666; line-height:40px; ">患处照上传</div>
+  <div style="width:15%; float:left; padding:0% 3% ;" ng-click="symptom.capture(6)"><img ng-src="{{symptom.screencap[6]}}"  alt=""/></div>
+  <div style="width:15%; float:left; padding:0% 3% ;" ng-click="symptom.capture(7)"><img ng-src="{{symptom.screencap[7]}}"  alt=""/></div>
+  <div style="width:15%; float:left; padding:0% 3% ;" ng-click="symptom.capture(8)"><img ng-src="{{symptom.screencap[8]}}"  alt=""/></div>
+  
+  <div class="clear"></div>
+</div>
+<div class="kuan">
+  <div style="width:100%; color:#666">所需服务</div>
+  <div style=" width:50%; float:left; line-height:50px;" ng-repeat="service in symptom.list"><input type="radio"  name="service" value="{{service.id}}" ng-model="symptom.serviceId"><span style="color:#666; margin-left:10%; ">{{service.name}}</span></div>
+  <div class="clear"></div>
+</div>
+<div style="width: 90%;
+  padding: 5%;">
+  <div class="newss"><a ng-click="symptom.submit()" >提交</a></div>
+</div>
+</body>
+</html>

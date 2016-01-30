@@ -1,0 +1,25 @@
+<!doctype html>
+<html ng-app="myCase">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>个人病例</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/gerenbingli.js"></script>
+</head>
+<body style="background:#f1f1f1" ng-controller="MyCaseController as myCase">
+<div class="kuan" ng-repeat="mycase in myCase.list" ng-click="myCase.detail(mycase.id)">
+  <div class="neirong1">
+    {{mycase.content}}
+    </div>
+    
+</div>
+<div style="width: 90%;
+  padding: 5%;">
+  <div class="newss" ng-click="myCase.addCase()"><a>新增病史</a></div>
+</div>
+</body>
+</html>

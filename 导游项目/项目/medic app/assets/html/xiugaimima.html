@@ -1,0 +1,47 @@
+<!doctype html>
+<html ng-app="password">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>修改密码</title>
+
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/xiugaimima.js"></script>
+</head>
+<body style="background:#f1f1f1" ng-controller="PasswordController as password">
+
+
+<div class="zhanghu" style="margin-top: 20px;">
+  <ul>
+    <li>
+      <div class="inp1" ><span class="wenzi2">旧密码:</span>
+      <input type="password"  ng-model="password.oldPwd" class="wenben">
+      <div class="clear"></div>
+    </div>
+    </li>
+    <li>
+      <div class="inp1" ><span class="wenzi2">密码:</span>
+      <input type="password" ng-model="password.newPwd"  class="wenben">
+      <div class="clear"></div>
+    </div>
+    </li>
+    <li>
+      <div class="inp1" ><span class="wenzi2">确认密码:</span>
+      <input type="password" ng-model="password.rePwd" class="wenben">
+      <div class="clear"></div>
+    </div>
+    </li>
+   
+   
+  </ul>
+</div>
+
+<div style="width: 90%;
+  padding: 5%;">
+  <div class="newss"><a href="#" ng-click="password.submit()" >确定</a></div>
+</div>
+</body>
+</html>

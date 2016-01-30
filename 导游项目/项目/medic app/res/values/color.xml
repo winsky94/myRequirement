@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black_one">#000</color>
+    <color name="red">#F00</color>
+    <color name="text_color_selected">#d34d4e</color>
+    <color name="text_color">@android:color/white</color>
+    <color name="text_title">#909090</color>
+    <color name="white">#FFFFFF</color><!--白色 -->
+    <color name="black">#000000</color>
+    <color name="gray">#9d9d9d</color>
+    <color name="title_bg">#3fc4ff</color>
+    <color name="login_bg">#51b6d4</color>
+    <color name="top_bg">#2f2f2f</color>
+    <color name="top_font">#c0c0c0</color>
+    <color name="top_font_selected">#ffffff</color>
+    <color name="bottom_sel">#46bfff</color>
+    <color name="attence_gray">#ECEBF2</color>
+    <color name="attence_title">#f3ab32</color>
+    <color name="camera_color">#d8d8d8</color>
+    <color name="draw_bg">#505050</color>
+    <color name="full_controller_bg">#e0505050</color>   
+    <color name="kedu">#00ddf1</color>
+    <color name="data">#f6b302</color>
+</resources>

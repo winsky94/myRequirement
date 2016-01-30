@@ -1,0 +1,56 @@
+<!doctype html>
+<html ng-app="symptom">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>订单详情</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/zhenzhuangdetail.js"></script>
+</head>
+<body style="background:#f1f1f1" ng-controller="SymptomController as symptom">
+<div style=" background:#3fc4ff; padding: 4px 4px 4px 4px;height: 40px;"><div style=" width:8%; float:left" ng-click="symptom.back()"><img src="images/fanghui_03.png" alt=""/></div><div style="width:90%; text-align:center; color:#FFF; font-size:1.5em;  float:left; line-height:38px;">订单详情</div>
+ <div class="clear"></div>
+</div>
+<div class="kuan">
+  <div class="neirong1">{{symptom.detail.description}}</div>
+</div>
+<div class="kuan">
+  <div style="float:left; width:30%; color:#666; line-height:40px; ">上传病例:</div>
+  <div style="width:15%; float:left; padding:0% 3% ;" ng-show="symptom.pic1[0]!=''"><a ng-href="http://{{symptom.url}}/upload/medical/{{symptom.pic1[0]}}"><img ng-src="http://{{symptom.url}}/upload/medical/s_{{symptom.pic1[0]}}"  alt=""/></a></div>
+  <div style="width:15%; float:left; padding:0% 3% ;" ng-show="symptom.pic1[1]!=''"><a ng-href="http://{{symptom.url}}/upload/medical/{{symptom.pic1[1]}}"><img ng-src="http://{{symptom.url}}/upload/medical/s_{{symptom.pic1[1]}}"  alt=""/></a></div>
+      <div style="width:15%; float:left; padding:0% 3% ;" ng-show="symptom.pic1[2]!=''"><a ng-href="http://{{symptom.url}}/upload/medical/{{symptom.pic1[2]}}"><img ng-src="http://{{symptom.url}}/upload/medical/s_{{symptom.pic1[2]}}"  alt=""/></a></div>
+  <div class="clear"></div>
+</div>
+<div class="kuan1">
+  <div style="float:left; width:30%; color:#666; line-height:40px; ">化验单上传:</div>
+  <div style="width:15%; float:left; padding:0% 3% ;" ng-show="symptom.pic2[0]!=''"><a ng-href="http://{{symptom.url}}/upload/medical/{{symptom.pic2[0]}}"><img ng-src="http://{{symptom.url}}/upload/medical/s_{{symptom.pic2[0]}}"  alt=""/></a></div>
+  <div style="width:15%; float:left; padding:0% 3% ;" ng-show="symptom.pic2[1]!=''"><a ng-href="http://{{symptom.url}}/upload/medical/{{symptom.pic2[1]}}"><img ng-src="http://{{symptom.url}}/upload/medical/s_{{symptom.pic2[1]}}"  alt=""/></a></div>
+  <div style="width:15%; float:left; padding:0% 3% ;" ng-show="symptom.pic2[2]!=''"><a ng-href="http://{{symptom.url}}/upload/medical/{{symptom.pic2[2]}}"><img ng-src="http://{{symptom.url}}/upload/medical/s_{{symptom.pic2[2]}}"  alt=""/></a></div>   
+  <div class="clear"></div>
+</div>
+<div class="kuan1">
+  <div style="float:left; width:30%; color:#666; line-height:40px; ">患处照上传:</div>
+  <div style="width:15%; float:left; padding:0% 3% ;" ng-show="symptom.pic3[0]!=''"><a ng-href="http://{{symptom.url}}/upload/medical/{{symptom.pic3[0]}}"><img ng-src="http://{{symptom.url}}/upload/medical/s_{{symptom.pic3[0]}}"  alt=""/></a></div>  
+  <div style="width:15%; float:left; padding:0% 3% ;" ng-show="symptom.pic3[1]!=''"><a ng-href="http://{{symptom.url}}/upload/medical/{{symptom.pic3[1]}}"><img ng-src="http://{{symptom.url}}/upload/medical/s_{{symptom.pic3[1]}}"  alt=""/></a></div>
+  <div style="width:15%; float:left; padding:0% 3% ;" ng-show="symptom.pic3[2]!=''"><a ng-href="http://{{symptom.url}}/upload/medical/{{symptom.pic3[2]}}"><img ng-src="http://{{symptom.url}}/upload/medical/s_{{symptom.pic3[2]}}"  alt=""/></a></div>
+  
+  <div class="clear"></div>
+</div>
+<div class="kuan">
+  <div style="width:50%; color:#666;float:left">所需服务:</div>
+  <div style=" width:50%; float:left; "><span style="color:#666;">{{symptom.detail.serviceName}}</span></div>
+  <div class="clear"></div>
+</div>
+<div class="kuan">
+  <div style="width:50%; color:#666;float:left">状态:</div>
+  <div style=" width:50%; float:left;" ng-show="symptom.detail.status==0"><span style="color:#666;">未接单</span></div>
+  <div style=" width:50%; float:left;" ng-show="symptom.detail.status==1"><span style="color:#666;">已接单</span></div>
+  <div style=" width:50%; float:left;" ng-show="symptom.detail.status==2"><span style="color:#666;">服务中</span></div>
+  <div style=" width:50%; float:left;" ng-show="symptom.detail.status!=null&&symptom.detail.status!=0&&symptom.detail.status!=1&&symptom.detail.status!=2"><span style="color:#666;">已完成</span></div>
+  <div class="clear"></div>
+</div>
+</body>
+</html>
